@@ -9,7 +9,7 @@ window.addEventListener("load", function() {
 
 document.querySelector("#play").addEventListener("click", function() {
 	video.play();
-	document.querySelector("#volume").innerHTML = video.volume * 100;
+	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + "%";
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -49,13 +49,13 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 document.querySelector("#slider").addEventListener("change", function() {
 	video.volume = document.querySelector("#slider").value / 100;
-	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value;
+	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + "%";
 });
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
 });
 
-document.querySelector("#original").addEventListener("click", function() {
+document.querySelector("#orig").addEventListener("click", function() {
 	video.classList.remove("oldSchool");
 });
